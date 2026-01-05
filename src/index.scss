@@ -1,0 +1,65 @@
+@use './styles/variables' as vars;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // outline: 1px solid red;
+}
+
+:root{
+    --layout_padding: clamp(1rem, 2.5vw, 2rem);
+    --navHeight : 50px;    
+ }
+:root{
+    --bg : #0f172a;
+    --bgLight:#152446;
+    --brown : #E34C26;
+}
+
+html{
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--bg);
+    color: vars.$text;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+h1{ font-size:2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 { font-size: 1em;}
+h5 { font-size: 0.83em;}
+h6 { font-size: 0.67em;}
+
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0f0f0f;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateY(0);
+  
+}
+
+.page-overlay.active {
+  animation: overlayMove 1.2s ease-in-out forwards;
+}
+
+@keyframes overlayMove {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,93 @@
+.featured-work {
+  padding: 6rem var(--layout_padding);
+  .container{
+    display: grid;
+    gap: 20px;
+    .section-header{
+        display: grid;
+        gap: 10px;
+    }
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  border: solid 2px var(--bgLight);
+  &:hover {
+    transform: translateY(-8px);
+  }
+}
+
+.project-media {
+  height: 220px;
+  //background: linear-gradient(135deg, #222, #333);
+  &.one{
+    background-image: url("../assets/cv.png");
+    background-size: cover;
+  }
+  &.two{
+    background-image: url("../assets/phone1.png");
+    background-size: cover;
+
+  }
+  &.three{
+    background-image: url("../assets/neurons.png");
+  }
+}
+
+.project-content {
+  padding: 2rem;
+
+  h3 {
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+.tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+
+  li {
+    font-size: 0.8em;
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+
+  a {
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.8;
+    color: var(--brown);
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

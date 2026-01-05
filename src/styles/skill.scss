@@ -1,0 +1,35 @@
+.skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 6rem var(--layout_padding);
+  align-items: center;
+  gap: 40px;
+  min-height: 40vh;
+  .skills-left{
+    background-color: var(--bgLight);
+    transform: translateX(calc(var(--layout_padding) * -1));
+    padding: 40px var(--layout_padding);
+  }
+  .skills-right {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(60px, 1fr));
+    gap: 4rem;
+    
+    span {
+      font-size: 2em;
+      opacity: 0.9;
+      cursor: default;
+    }
+  }
+  @media (max-width:700px){
+    grid-template-columns: 1fr;
+    .skills-left{
+      padding: 20px var(--layout_padding);
+    }
+  }
+}
+
+
+
+
+
