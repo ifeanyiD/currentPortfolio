@@ -7,13 +7,14 @@ export default function PageTransition() {
   const isFirstLoad = useRef(true);
 
   useEffect(() => {
+    const el = overlayRef.current;
+    if (!el) return;
     if (isFirstLoad.current) {
       isFirstLoad.current = false;
       el.classList.remove("active");
       return;
     }
-    const el = overlayRef.current;
-    if (!el) return;
+    
 
     el.classList.remove("active");
     void el.offsetWidth;
