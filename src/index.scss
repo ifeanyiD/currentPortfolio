@@ -42,10 +42,13 @@ h6 { font-size: 0.67em;}
   z-index: 9999;
   pointer-events: none;
   transform: translateY(0);
-  
+  opacity: 0;
+  visibility: hidden;
 }
 
 .page-overlay.active {
+  opacity: 1;
+  visibility: visible;
   animation: overlayMove 1.2s ease-in-out forwards;
 }
 

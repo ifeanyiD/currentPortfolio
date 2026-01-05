@@ -9,6 +9,7 @@ export default function PageTransition() {
   useEffect(() => {
     if (isFirstLoad.current) {
       isFirstLoad.current = false;
+      el.classList.remove("active");
       return;
     }
     const el = overlayRef.current;
